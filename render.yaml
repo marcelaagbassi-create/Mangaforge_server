@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: mangaforge-ai-server
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MISTRAL_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: NODE_ENV
+        value: production
